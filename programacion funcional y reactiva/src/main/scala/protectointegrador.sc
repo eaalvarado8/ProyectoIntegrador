@@ -131,21 +131,45 @@ new File("C:\\Users\\USUARIO\\dataclase.csv")
   )
 //Cuarta Pregunta
 
+//Cuarta Pregunta
+
 val motocicletas = values
   .filter(row => row.clase.startsWith("Motocicleta"))
-  .map(row=> (row.marca, row.clase))
+  .map(row=> (row.marca, row.clase,row.provincia))
   .groupBy(identity)
-  .map({ case((marca, clase), lista) => ((marca, clase), lista.length)})
+  .map({ case((marca, clase,provincia), lista) => ((marca, clase, provincia), lista.length)})
 
 
-val motocicletasSorted = ListMap(motocicletas.toSeq.sortWith(_._2 > _._2):_*)
+val motocicletasSorted = ListMap(motocicletas.toSeq.sortWith(._2 > _._2):*)
 
-motocicletasSorted.foreach(row => printf("%s, %s, %d\n",
+motocicletasSorted.foreach(row => printf("%s, %s,%s, %d\n",
   row._1._1,
   row._1._2,
+  row._1._3,
   row._2))
-new File("C:\\Users\\USUARIO\\datamotocicletas.csv")
-  .writeCsv[(String, String, Int)](
-    motocicletasSorted.map(row => (row._1._1, row._1._2, row._2)),
-    rfc.withHeader("marca", "clase",  "cantidad")
+new File("C:\\Users\\Usuario\\datamotocicletas.csv")
+  .writeCsv[(String, String,String, Int)](
+    motocicletasSorted.map(row => (row._1._1, row._1._2,row._1._3, row._2)),
+    rfc.withHeader("marca", "clase","provincia",  "cantidad")
+  )
+//Quinta Pregunta
+val pesado = values
+  .filter(row => row.clase == "Tanquero" | row.clase == "Trailer" | row.clase == "Volqueta" | row.clase.endsWith("n"))
+  .map(row=> (row.marca, row.clase,row.provincia,row.servicio))
+  .groupBy(identity)
+  .map({ case((marca, clase,provincia,servicio), lista) => ((marca, clase,provincia,servicio), lista.length)})
+
+
+val pesadoSorted = ListMap(pesado.toSeq.sortWith(_._2 > _._2):_*)
+
+pesadoSorted.foreach(row => printf("%s, %s,%s,%s, %d\n",
+  row._1._1,
+  row._1._2,
+  row._1._3,
+  row._1._4,
+  row._2))
+new File("C:\\Users\\Usuario\\datapesado.csv")
+  .writeCsv[(String, String,String,String, Int)](
+    pesadoSorted.map(row => (row._1._1, row._1._2,row._1._3,row._1._4, row._2)),
+    rfc.withHeader("marca", "clase","provincia","servicio",  "cantidad")
   )

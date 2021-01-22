@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.9.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.2.1"></script>
+
+    <title>DataViz - Proyecto Integrador</title>
+
+    <style media="screen">
+        /* Add space between Vega-Embed links  */
+        .vega-actions a {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Item Uno</h1>
+<div id="vis1"></div>
+<div id="vis2"></div>
+<div id="vis3"></div>
+
+<h1>Item Dos</h1>
+<div id="vis4"></div>
+<div id="vis5"></div>
+<div id="vis6"></div>
+
+<h1>Item Tres</h1>
+<div id="vis7"></div>
+<div id="vis8"></div>
+<div id="vis9"></div>
+
+<h1>Item Cuatro</h1>
+<div id="vis10"></div>
+<div id="vis11"></div>
+<div id="vis12"></div>
+
+<h1>Item Cinco</h1>
+<div id="vis13"></div>
+<div id="vis14"></div>
+<div id="vis15"></div>
+
+
+
+
+<script>
+   
+    const visuaUno = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item1/dataCombustible.csv"
+        },
+        "width": 100,
+        "height": 400,
+        mark: 'bar',
+        encoding: {
+            x: {
+                field: 'combustible',
+                type: 'nominal'},
+            y: {
+                field: 'cantidad',
+                type: 'quantitative',
+                scale: {type: 'symlog'}
+            },
+            color: {
+                field: 'marca',
+                type: 'nominal',
+            },
+        }
+    };
+    vegaEmbed('#vis1', visuaUno);
+
+
+     const visuaDos = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item1/dataCombustible.csv"
+        },
+         "width": 100,
+         "height": 400,
+         mark: 'tick',
+         encoding: {
+             x: {
+                 field: 'combustible',
+                 type: 'nominal'},
+             y: {
+                 field: 'cantidad',
+                 type: 'quantitative',
+                 scale: {type: 'symlog'}
+             },
+             color: {
+                 field: 'marca',
+                 type: 'nominal',
+             },
+         }
+    };
+   
+    vegaEmbed('#vis2', visuaDos);
+
+     const visuaTres = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item1/dataCombustible.csv"
+        },
+        "width": 100,
+        "height": 400,
+        mark: 'circle',
+        encoding: {
+            x: {
+                field: 'combustible',
+                type: 'nominal'},
+            y: {
+                field: 'cantidad',
+                type: 'quantitative',
+                scale: {type: 'symlog'}
+            },
+            color:{
+                field:"marca",
+                type: 'nominal',
+            },
+
+        }
+    };
+
+    vegaEmbed('#vis3', visuaTres);
+
+     const visuaCuatro = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item2/dataservicio.csv"
+        },
+        "width": 100,
+        "height": 400,
+        mark: {type: 'area', color: '#5c4400'},
+        encoding: {
+            x: {
+                field: 'servicio',
+                type: 'nominal'},
+            y: {
+                field: 'cantidad',
+                type: 'quantitative',
+                scale: {type: 'symlog'}
+            },
+        }
+    };
+    vegaEmbed('#vis4', visuaCuatro);
+
+     const visuaCinco = {
+         $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+         data: {
+             "url": "Item2/dataservicio.csv"
+         },
+         "width": 400,
+         "height": 100,
+         mark: 'bar',
+         encoding: {
+             x: {
+                 field: 'cantidad',
+                 type: 'quantitative',
+                 scale: {type: 'symlog'},
+
+             },
+             y: {
+                 field: 'servicio',
+                 type: 'nominal',
+                 axis: {'labelAngle': 0},
+             },
+             color:{
+                 field:'marca',
+                 type: 'nominal',
+             },
+
+         }
+    };
+    vegaEmbed('#vis5', visuaCinco);
+
+     const visuaSeis = {
+         $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+         data: {
+             "url": "Item2/dataservicio.csv"
+         },
+         "width": 100,
+         "height": 400,
+         mark: 'circle',
+         encoding: {
+             x: {
+                 field: 'servicio',
+                 type: 'nominal'},
+             y: {
+                 field: 'cantidad',
+                 scale: {type: 'symlog'}
+             },
+             color:{
+                 field:"marca",
+                 type: 'nominal',
+             },
+         }
+    };
+    vegaEmbed('#vis6', visuaSeis);
+
+     const visuaSiete = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item3/dataclase.csv"
+        },
+        "width": 500,
+        "height": 400,
+        mark: 'tick',
+        encoding: {
+            x: {
+                field: 'clase',
+                type: 'nominal'},
+            y: {
+                field: 'cantidad',
+                type: 'quantitative',
+                scale: {type: 'symlog'}
+            },
+            color:{
+                field:'marca',
+                type: 'nominal',
+            },
+        }
+    };
+    vegaEmbed('#vis7', visuaSiete);
+
+     const visuaOcho = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item3/dataclase.csv"
+        },
+        "width": 500,
+        "height": 400,
+        mark: 'bar',
+        encoding: {
+            x: {
+                field: 'clase',
+                type: 'nominal'},
+            y: {
+                field: 'cantidad',
+                scale: {type: 'symlog'}
+                },
+            color:{
+                field:'marca',
+                type: 'nominal',
+            },
+        }
+    };
+    vegaEmbed('#vis8', visuaOcho);
+
+     const visuaNueve = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item3/dataclase.csv"
+        },
+        "width": 500,
+        "height": 400,
+        mark: 'point',
+        encoding: {
+            x: {
+                field: 'cantidad',
+                type: 'quantitative',
+                scale: {type: 'symlog'},
+                
+                },
+            y: {
+                field: 'clase',
+                type: 'nominal',
+            },
+            color:{
+                field:"marca",
+                type: 'nominal',
+            },
+
+        }
+    };
+    vegaEmbed('#vis9', visuaNueve);
+
+     const visuaDiez = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item4/datamotocicletas.csv"
+        },
+        "width": 500,
+        "height": 300,
+        mark: 'bar',
+        encoding: {
+            x: {
+                field: 'cantidad',
+                type: 'quantitative',
+                scale: {type: 'symlog'}
+                },
+            y: {
+                field: 'provincia',
+                type: 'nominal',
+            },
+            color:{
+                field:"marca",
+                type: 'nominal',
+            },
+        }
+    };
+    vegaEmbed('#vis10', visuaDiez);
+
+     const visuaOnce = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item4/datamotocicletas.csv"
+        },
+        "width": 500,
+        "height": 300,
+        mark: 'point',
+        encoding: {
+            x: {
+                field: 'provincia',
+                type: 'nominal'},
+            y: {
+                field: 'cantidad',
+                type: 'quantitative',
+                scale: {type: 'symlog'}
+                },
+        }
+    };
+    vegaEmbed('#vis11', visuaOnce);
+
+     const visuaDoce = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item4/datamotocicletas.csv"
+        },
+        "width": 500,
+        "height": 400,
+        mark: 'circle',
+        encoding: {
+            x: {
+                field: 'provincia',
+                type: 'nominal',
+            },
+            y: {
+                field: 'cantidad',
+                type: 'quantitative',
+                scale: {type: 'symlog'},
+            },
+            color:{
+                field:"marca",
+                type: 'nominal',
+            },
+
+        }
+    };
+    vegaEmbed('#vis12', visuaDoce);
+
+     const visuaTrece = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item5/datapesado.csv"
+        },
+        "width": 500,
+        "height": 200,
+        mark: 'tick',
+        encoding: {
+            x: {
+                aggregate: 'sum',
+                field: 'cantidad',
+                type: 'quantitative',
+                },
+            y: {
+
+                field: 'clase',
+                type: 'nominal',
+            },
+        }
+    };
+    vegaEmbed('#vis13', visuaTrece);
+
+     const visuaCatorce = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {
+            "url": "Item5/datapesado.csv"
+        },
+        "width": 500,
+        "height": 400,
+        mark: 'circle',
+        encoding: {
+            x: {
+                aggregate: 'sum',
+                field: 'cantidad',
+                type: 'quantitative'},
+            y: {
+                field: 'clase',
+                type: 'nominal',
+            },
+            color: {
+                field : 'marca',
+                type :'nominal'
+            }
+        }
+    };
+    vegaEmbed('#vis14', visuaCatorce);
+
+
+    const visuaQuince = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {"url": 'Item5/datapesado.csv'},
+        "width": 500,
+        "height": 400,
+        mark: 'bar',
+        encoding: {
+            row: {"field": 'provincia', "type": 'nominal'},
+            x: {"field": 'cantidad', "type": 'quantitative', "agregate": 'Suma'},
+            y: {"field": 'servicio', "type": 'nominal'},
+            color: {"field": 'clase', "type": 'nominal'}
+        }
+    };
+    vegaEmbed('#vis15', visuaQuince);
+
+</script>
+</body>
+</html>
