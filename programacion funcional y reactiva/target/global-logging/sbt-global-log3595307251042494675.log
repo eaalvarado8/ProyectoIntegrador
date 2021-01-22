@@ -1,0 +1,103 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(early(addPluginSbtFile="""C:\Users\Usuario\AppData\Local\Temp\idea.sbt"""), None, None)
+[debug] > Exec(addPluginSbtFile="""C:\Users\Usuario\AppData\Local\Temp\idea.sbt""", None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.4.6 (AdoptOpenJDK Java 11.0.8)
+[debug]       Load.loadUnit: plugins took 127.7007ms
+[debug]       Load.loadUnit: defsScala took 0.3045ms
+[debug] [Loading] Scanning directory C:\Users\Usuario\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Usuario\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 30.8696 ms
+[debug]           Load.resolveProject(global-plugins) took 61.7569ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\Usuario\.sbt\1.0\plugins, plugins: List(<none>))) took 135.4849ms
+[debug] [Loading] Done in C:\Users\Usuario\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 166.358ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.2641ms
+[debug]     Load.loadUnit(file:/C:/Users/Usuario/.sbt/1.0/plugins/, ...) took 303.8756ms
+[debug]   Load.apply: load took 568.1448ms
+[debug]   Load.apply: resolveProjects took 9.3104ms
+[debug]   Load.apply: finalTransforms took 110.9841ms
+[debug]   Load.apply: config.delegates took 9.6761ms
+[debug]   Load.apply: Def.make(settings)... took 1061.7045ms
+[debug]   Load.apply: structureIndex took 136.67ms
+[debug]   Load.apply: mkStreams took 3.695ms
+[info] loading global plugins from C:\Users\Usuario\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 39970.747ms
+[debug]           Load.loadUnit: plugins took 58.1453ms
+[debug]           Load.loadUnit: defsScala took 0.0065ms
+[debug] [Loading] Scanning directory C:\Users\Usuario\Desktop\Clases\programacion funcional y reactiva\project
+[debug]             Load.loadUnit: mkEval took 15.7026ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Usuario\Desktop\Clases\programacion funcional y reactiva\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 5.2934 ms
+[info] loading settings for project programacion-funcional-y-reactiva-build from idea.sbt ...
+[debug]               Load.resolveProject(programacion-funcional-y-reactiva-build) took 9.0404ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id programacion-funcional-y-reactiva-build, base: C:\Users\Usuario\Desktop\Clases\programacion funcional y reactiva\project, plugins: List(<none>))) took 15.0835ms
+[debug] [Loading] Done in C:\Users\Usuario\Desktop\Clases\programacion funcional y reactiva\project, returning: (programacion-funcional-y-reactiva-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 7506.3964ms
+[debug]           Load.loadUnit: cleanEvalClasses took 9.3721ms
+[debug]         Load.loadUnit(file:/C:/Users/Usuario/Desktop/Clases/programacion%20funcional%20y%20reactiva/project/, ...) took 7575.8136ms
+[debug]       Load.apply: load took 7579.6047ms
+[debug]       Load.apply: resolveProjects took 0.2058ms
+[debug]       Load.apply: finalTransforms took 32.5548ms
+[debug]       Load.apply: config.delegates took 0.5239ms
+[debug]       Load.apply: Def.make(settings)... took 190.3324ms
+[debug]       Load.apply: structureIndex took 63.3708ms
+[debug]       Load.apply: mkStreams took 0.0029ms
+[info] loading project definition from C:\Users\Usuario\Desktop\Clases\programacion funcional y reactiva\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 9948.4509ms
+[debug]     Load.loadUnit: defsScala took 0.009ms
+[debug] [Loading] Scanning directory C:\Users\Usuario\Desktop\Clases\programacion funcional y reactiva
+[debug]       Load.loadUnit: mkEval took 0.6851ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Usuario\Desktop\Clases\programacion funcional y reactiva, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin))), Clause(And(Set(Atom(sbt.plugins.CorePlugin), Atom(sbt.plugins.JvmPlugin))),Set(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 3.648 ms
+[info] loading settings for project programacion-funcional-y-reactiva from build.sbt ...
+[debug]         Load.resolveProject(programacion-funcional-y-reactiva) took 118.9074ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id programacion-funcional-y-reactiva, base: C:\Users\Usuario\Desktop\Clases\programacion funcional y reactiva, plugins: List(<none>))) took 125.5474ms
+[debug] [Loading] Done in C:\Users\Usuario\Desktop\Clases\programacion funcional y reactiva, returning: (programacion-funcional-y-reactiva)
+[debug]     Load.loadUnit: loadedProjectsRaw took 6164.4645ms
+[debug]     Load.loadUnit: cleanEvalClasses took 92.8575ms
+[debug]   Load.loadUnit(file:/C:/Users/Usuario/Desktop/Clases/programacion%20funcional%20y%20reactiva/, ...) took 16207.4266ms
+[debug] Load.apply: load took 16214.7791ms
+[debug] Load.apply: resolveProjects took 0.7588ms
+[debug] Load.apply: finalTransforms took 104.8947ms
+[debug] Load.apply: config.delegates took 1.4055ms
+[debug] Load.apply: Def.make(settings)... took 680.7076ms
+[debug] Load.apply: structureIndex took 78.7335ms
+[debug] Load.apply: mkStreams took 0.0037ms
+[info] set current project to programacion funcional y reactiva (in build file:/C:/Users/Usuario/Desktop/Clases/programacion%20funcional%20y%20reactiva/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(; set ideaPort in Global := 61628 ; idea-shell, None, None)
+[debug] > Exec(set ideaPort in Global := 61628, None, None)
+[info] Defining Global / ideaPort
+[info] The new value will be used by Compile / compile, Test / compile
+[debug] Defining 
+[debug] 	Global / ideaPort
+[debug] 
+[debug] The new value will be used by 
+[debug] 	Compile / compile
+[debug] 	Test / compile
+[info] Reapplying settings...
+[info] set current project to programacion funcional y reactiva (in build file:/C:/Users/Usuario/Desktop/Clases/programacion%20funcional%20y%20reactiva/)
+[debug] > Exec(idea-shell, None, None)
